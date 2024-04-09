@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Next Level Screen Time",
+  "description": "Your go-to next level productivity browser tool.",
+  "version": "1.0",
+  "permissions": [
+      "storage", "activeTab","scripting", "tabs"
+  ],
+  "background": {
+    "service_worker": "./scripts/background.js"
+  },"action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["./scripts/contentScript.js"],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ]
+}
