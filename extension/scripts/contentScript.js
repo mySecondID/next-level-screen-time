@@ -1,6 +1,6 @@
 console.log("Hello from content script!");
+console.log("content:", document.location.href);
 
-console.log(document.location.href);
-
-if(document)
-    console.log(document.querySelectorAll("hi"))
+if(document){
+    console.log("doc: ", document)    
+}
